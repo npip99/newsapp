@@ -101,6 +101,9 @@ function loadArticle() {
             "ucla": "UCLA protester encampment ended by police.",
             "trumptrial": "Trump awaiting trial for \"hush money\" payments to Stormy Daniels.",
         }[articleId];
+        if (articleId != "israelpalestine") {
+            document.getElementById('commento').style.display = 'none';
+        }
         fetch(articlePath)
             .then(response => {
                 if (!response.ok) {
