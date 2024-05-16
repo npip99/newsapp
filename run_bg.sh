@@ -1,2 +1,2 @@
 #!/bin/bash
-screen -dmS News-Backend -L -Logfile news.log bash -c './run.sh'
+screen -dmS News-Backend -L -Logfile news.log sudo bash -c './run.sh'
