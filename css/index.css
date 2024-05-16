@@ -1,42 +1,37 @@
 
   
-  .header {
+  .header, .header-left, .header-right, .header-title {
     height:100px;
   }
   
-  .header-left {
-    height: 100%;
+  .header-left, .header-right {
     float: left;
+    width: 50%;
   }
   
   .header-title {
-    height: 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
-    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .header-right {
     float: right;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    margin-right:75px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 75px;
   }
   
   .main {
-    width:100%;
     display: flex;
-    flex-direction: row;
+    width: 100% 
   }
   
   .articles {
-    width: 75%;
-    box-sizing: border-box;
+    flex: 3;
     padding: 0 100px;
-    padding-right:0px;
+    padding-right:0;
   }
   
   .article {
@@ -45,17 +40,8 @@
     padding-bottom: 70px;
   }
   
-  .article-name {
-    line-height: 1;
-    font-size: 2.3em;
-  }
-  
-  .article-name h1 {
+  .article-name h1, .article-date, article-nav{
     margin: 0;
-  }
-  
-  .article-date {
-    float:left;
   }
   
   .article-nav {
@@ -64,37 +50,61 @@
   }
   
   .article-nav a {
+    font-size: 2em;
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .info {
+    flex: 1;
+    padding: 0 50px;
+    margin-top: 50px;
+  }
+  
+  .article-nav a {
     font-size:2em;
-    color:green;
+    color: green;
     text-decoration:none;
     font-weight:700;
   }
   
-  .article-text {
-    clear: both;
-  }
-  
   .info {
-    width: 25%;
-    box-sizing: border-box;
-    font-size:1.2em;
-    margin:auto;
-    padding:0 50px;
-    margin-top:50px;
+    flex: 1;
+    padding: 0 50px; 
+    margin-top: 50px;
   }
   
   .info button {
     background-color:lightgreen;
     border: none;
-    padding: 4px 8px;
-    font-weight:600;
-  }
-  
-  h2 {
-    margin: 0;
-  }
-  
-  #header-logo {
-    height:100px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
   }
 
+.comments {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+.comments h3 {
+  color: #333;
+}
+
+#comment-list {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0;
+}
+.coment { 
+  margin-bottom: 10px; 
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+#comment-form label {
+  display: block;
+  margin-top: 10px;
+
+}
