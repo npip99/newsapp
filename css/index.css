@@ -38,6 +38,10 @@ header {
   margin-right: 20px;
 }
 
+nav {
+  padding-left: 15px;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
