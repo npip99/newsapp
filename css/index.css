@@ -128,7 +128,6 @@ h2 {
   margin-bottom: 5px;
   border-radius: 5px;
 }
-
 .like-button, .dislike-button {
   display: inline-block;
   cursor: pointer;
@@ -143,14 +142,15 @@ h2 {
 
 .like-button:hover, .dislike-button:hover {
   transform: translateY(-2px);
+  background-color: #e0e0e0;
 }
 
-.like-button.active {
+.like-button.active, .like-button:hover.active {
   background-color: green;
   color: white;
 }
 
-.dislike-button.active {
+.dislike-button.active, .dislike-button:hover.active {
   background-color: red;
   color: white;
 }
