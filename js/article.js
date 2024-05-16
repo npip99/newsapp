@@ -62,7 +62,7 @@ function loadLikeDislike(articleId) {
 
     dislikeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const text = button.dataset.id;
+            const topic_id = button.dataset.id;
             recordOpinion(articleId, topic_id, "LIKE").then(() => {
                 toggleButton(button, true);
 
@@ -86,6 +86,14 @@ function getQueryParam(param) {
 
 function loadArticle() {
     const articleId = getQueryParam('article_id');
+    let commentoId = articleId
+    if (articleId == "israelpalestine") {
+        commentoId = "/"
+    }
+    document.getElementById('commento-comments').innerHTML = `
+    <script defer src="https://cdn.commento.io/js/commento.js" data-page-id="${commentoId}"></script>
+    <div id="commento"></div>
+    `;
     if (articleId) {
         const articlePath = `./articles/${articleId}.html`;
         fetch(articlePath)
