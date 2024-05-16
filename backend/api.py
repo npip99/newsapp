@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from uuid import UUID
 from typing import Optional
 import database
 
@@ -14,6 +13,7 @@ database.init_db()
 # Mount the css and js directories
 app.mount("/css", StaticFiles(directory="../css"), name="css")
 app.mount("/js", StaticFiles(directory="../js"), name="js")
+app.mount("/articles", StaticFiles(directory="../articles"), name="articles")
 
 # Serve the index.html at the root
 @app.get("/")
@@ -33,7 +33,7 @@ async def read_index():
 
 class OpinionRequest(BaseModel):
     user_id: str
-    article_id: UUID
+    article_id: str
     topic_id: str
     opinion: Optional[str]
 

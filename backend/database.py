@@ -1,5 +1,4 @@
 import sqlite3
-from uuid import UUID
 import os
 from typing import Optional
 
@@ -31,7 +30,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-def record_opinion(user_id: str, article_id: UUID, topic_id: str, opinion: Optional[str]):
+def record_opinion(user_id: str, article_id: str, topic_id: str, opinion: Optional[str]):
     conn = sqlite3.connect(DATABASE_NAME)
     cursor = conn.cursor()
     if opinion is None:
