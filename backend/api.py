@@ -18,7 +18,18 @@ app.mount("/js", StaticFiles(directory="../js"), name="js")
 # Serve the index.html at the root
 @app.get("/")
 async def read_index():
-    return FileResponse("../index.html")
+    return FileResponse("../home.html")
+# Serve the index.html at the root
+@app.get("/home")
+async def read_index():
+    return FileResponse("../home.html")
+# Serve the index.html at the root
+@app.get("/index.html")
+async def read_index():
+    return FileResponse("../home.html")
+@app.get("/article.html")
+async def read_index():
+    return FileResponse("../article.html")
 
 class OpinionRequest(BaseModel):
     user_id: str
