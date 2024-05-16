@@ -10,37 +10,59 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.header, .header-left, .header-right, .header-title {
-  height: 100px;
-}
+.header
+  display: flex;
+  justify-content: space-between
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px; 
+  border-bottom: 1px solid #ddd
 
-.header-left, .header-right {
-  float: left;
-  width: 50%;
-}
 
-.header-title {
+.header-left {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+ .header-left h1 {
+  margin-right: 20px;
+ }
+
+ nav u1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+ }
+
+ nav ul li {
+  margin-right: 20px;
+ }
+ nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .header-right {
-  float: right;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 75px;
 }
 
-.search-label {
-  margin-right: 10px;
-  font-size: 1.2em;
-}
-
-#search {
+.header-right input[type="text"] {
   padding: 5px;
-  font-size: 1em;
+  margin-right: 10px;
+}
+
+.subscribe-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #0056b3;
 }
 
 .main {
@@ -128,6 +150,7 @@ h2 {
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
 .like-button, .dislike-button {
   display: inline-block;
   cursor: pointer;
