@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional
@@ -18,15 +18,16 @@ app.mount("/articles", StaticFiles(directory="../articles"), name="articles")
 # Serve the index.html at the root
 @app.get("/")
 async def read_index():
+    return RedirectResponse(url="/article.html?article_id=israelpalestine")
     return FileResponse("../home.html")
 # Serve the index.html at the root
 @app.get("/home")
 async def read_index():
+    return RedirectResponse(url="/article.html?article_id=israelpalestine")
     return FileResponse("../home.html")
-# Serve the index.html at the root
 @app.get("/index.html")
 async def read_index():
-    return FileResponse("../home.html")
+    return RedirectResponse(url="/article.html?article_id=israelpalestine")
 @app.get("/article.html")
 async def read_index():
     return FileResponse("../article.html")
