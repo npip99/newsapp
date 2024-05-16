@@ -99,7 +99,7 @@ function loadArticle() {
         document.getElementById('article-name').innerHTML = {
             "israelpalestine": "May's Israel-Palestine Developments",
             "ucla": "UCLA protester encampment ended by police.",
-            "trumptrial": "Go to ./js/article.js Line 102 to change this",
+            "trumptrial": "Trump awaiting trial for \"hush money\" payments to Stormy Daniels.",
         }[articleId];
         fetch(articlePath)
             .then(response => {
