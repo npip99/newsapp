@@ -138,32 +138,20 @@ h2 {
   border: none;
   font-size: 1.5em;
   border-radius: 5px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s, color 0.2s;
 }
 
 .like-button:hover, .dislike-button:hover {
   transform: translateY(-2px);
 }
 
-.info {
-  flex: 1;
-  padding: 0 50px;
-  margin-top: 50px;
+.like-button.active {
+  background-color: green;
+  color: white;
 }
 
-.info button {
-  background-color: lightgreen;
-  border: none;
-  padding: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  display: block;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.info button:hover {
-  background-color: darkgreen;
+.dislike-button.active {
+  background-color: red;
   color: white;
 }
 
