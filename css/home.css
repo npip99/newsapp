@@ -1,0 +1,190 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #3498db;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+  }
+  
+  .subscribe-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #c0392b;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
+  
+  .main-content {
+    flex: 3;
+    padding-right: 20px;
+  }
+  
+  .featured-article {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .featured-article img {
+    width: 40%;
+    object-fit: cover;
+  }
+  
+  .article-info {
+    padding: 20px;
+  }
+  
+  .article-info h2 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .article-info a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .article-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .latest-articles h2 {
+    margin-top: 0;
+  }
+  
+  .article-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .article-list article {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article-list article h3 {
+    margin-top: 0;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .subscribe-widget {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .subscribe-widget button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subscribe-widget button:hover {
+    background-color: #c0392b;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-content nav ul {
+    display: flex;
+  }
+  
+  .footer-content nav ul li {
+    margin-right: 20px;
+  }
+  
+  .footer-content nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+  }
