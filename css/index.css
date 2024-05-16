@@ -71,7 +71,8 @@ nav ul li a {
 .main {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .articles {
@@ -111,8 +112,12 @@ nav ul li a {
   margin-top: 20px;
 }
 
+.article-image-container {
+  text-align: center;
+}
+
 .article-image {
-  width: 100%;
+  width: 50%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
