@@ -1,2 +1,4 @@
 #!/bin/bash
-sudo python3 -m http.server 80
+cd backend
+. .venv/bin/activate
+uvicorn api:app --port 80 --reload
