@@ -18,12 +18,10 @@ app.mount("/articles", StaticFiles(directory="../articles"), name="articles")
 # Serve the index.html at the root
 @app.get("/")
 async def read_index():
-    return RedirectResponse(url="/article.html?article_id=israelpalestine")
     return FileResponse("../home.html")
 # Serve the index.html at the root
 @app.get("/home")
 async def read_index():
-    return RedirectResponse(url="/article.html?article_id=israelpalestine")
     return FileResponse("../home.html")
 @app.get("/index.html")
 async def read_index():
