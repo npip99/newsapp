@@ -96,6 +96,11 @@ function loadArticle() {
     `;*/
     if (articleId) {
         const articlePath = `./articles/${articleId}.html`;
+        document.getElementById('article-name').innerHTML = {
+            "israelpalestine": "May's Israel-Palestine Developments",
+            "ucla": "UCLA protester encampment ended by police.",
+            "trumptrial": "Go to ./js/article.js Line 102 to change this",
+        }[articleId];
         fetch(articlePath)
             .then(response => {
                 if (!response.ok) {
